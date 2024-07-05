@@ -1,0 +1,181 @@
+body{
+  width: 100%;
+  height: 100%;
+  /* border: solid green; */
+  display: flex; 
+  justify-content: center; 
+  background-color: #B4B5BE;
+}
+
+/* !!!!!!!!!!!!!!APP!!!!!!!!!!!!!!!!!!! */
+
+.Contenitore{
+  /* border: solid red; */
+  width: 1411px;
+  height: 1399px;
+}
+
+.RowContenitore{
+width: 100%;
+height: 1399px;
+}
+/* !!!!!!!!!!!!!!!!!!!!TOPBAR!!!!!!!!!!!!!!!! */
+
+.contorno1{
+/* background-color: grey; */
+display: flex;
+justify-content: center;
+cursor: pointer;
+margin-top: 15px;
+}
+
+h1{
+  color: aliceblue;
+}
+
+h1:hover{
+  color: black;
+}
+
+/* !!!!!!!!!!!!!!!!!!!MENU!!!!!!!!!!!!!!!!!!!! */
+
+.contenitoreMenu{
+/* border: solid black; */
+width: 100%;
+background-color: #AFBEA2;
+border-radius: 10px;
+-webkit-box-shadow: 8px 9px 10px 0px #494949;
+-moz-box-shadow: 8px 9px 10px 0px #494949;
+-o-box-shadow: 8px 9px 10px 0px #494949;
+box-shadow: 8px 9px 10px 0px #494949;
+padding-bottom: 10px;
+}
+.drop{
+  margin-left: 20px;
+  margin-right: 35px;
+  padding-left: 35px;
+   /* border: solid black; */ 
+  border-radius: 5%;
+  width: 200px;
+  height: 50px;
+  font-size: x-large;
+  cursor: pointer;
+}
+.inLinea{
+display: flex;
+justify-content: space-around;
+
+}
+
+.h2Menu{
+  font-size: x-large;
+  color: aliceblue;
+  font-weight: bolder;
+  cursor: pointer;
+}
+.h2Menu:hover{
+  color: black;
+}
+
+
+/* !!!!!!!!SEARCH BAR!!!!!!!!!!!!! */
+
+.ConteinerSearch{
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.SearchBar{
+  width: 500px;
+  height: 50px;
+  margin-right: 35px;
+  border: none;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 11px;
+}
+
+.buttonSearch{
+  width: 90px;
+  height: 50px;
+}
+
+/* !!!!!!!!CONTENUTO!!!!!!!!!!!!!!! */
+.contenitoreContent{
+  margin-top: 30px;
+  /* border: solid black; */
+  width: 100%;
+  background-color: #AFBEA2;
+  border-radius: 10px;
+  -webkit-box-shadow: 8px 9px 10px 0px #494949;
+  -moz-box-shadow: 8px 9px 10px 0px #494949;
+  -o-box-shadow: 8px 9px 10px 0px #494949;
+  box-shadow: 8px 9px 10px 0px #494949;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  }
+  
+  .inLineaContent{
+    
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .pContet{
+    font-size: x-large;
+    color: aliceblue;
+    font-weight: bolder;
+    cursor: pointer;
+  }
+
+  .imgCardContent{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+  }
+
+  .imgCardContent {
+    width: 294px;
+    height: 334px;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    border-radius: 15px;
+  }
+  
+  .BodyCardContent {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .BodyCardContent .btn-primary {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .ContentButton{
+    align-items: center;
+    background-color: transparent;
+    background-color: rgba(2, 32, 71, 0.247);
+    border:1px solid black;
+    width: 142px;
+    height: 37px;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  .AllCards{
+    display: flex;
+  }
+
+  .CardSingle{
+    margin-right: 49px;
+    box-shadow: 46px -13px 13px -29px rgba(0,0,0,0.1);
+    cursor: pointer;
+  }
