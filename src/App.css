@@ -3,9 +3,14 @@ body{
   height: 100%;
   /* border: solid green; */
   display: flex; 
-  justify-content: center; 
-  background-color: #B4B5BE;
+  justify-content: center;
+  background-image: url('https://images.pexels.com/photos/5498976/pexels-photo-5498976.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); /* Specifica il percorso della tua immagine di sfondo */
+  background-size: cover; /* Copre l'intera area della pagina */
+  background-repeat: no-repeat; /* Impedisce la ripetizione dell'immagine */
+  background-attachment: fixed; /* Rende l'immagine di sfondo fissa durante lo scrolling */
+  background-position: center; /* Centra l'immagine di sfondo */
 }
+
 
 /* !!!!!!!!!!!!!!APP!!!!!!!!!!!!!!!!!!! */
 
@@ -42,12 +47,12 @@ h1:hover{
 .contenitoreMenu{
 /* border: solid black; */
 width: 100%;
-background-color: #AFBEA2;
-border-radius: 10px;
--webkit-box-shadow: 8px 9px 10px 0px #494949;
+background-color: transparent;
+/* border-radius: 10px; */
+/* -webkit-box-shadow: 8px 9px 10px 0px #494949;
 -moz-box-shadow: 8px 9px 10px 0px #494949;
 -o-box-shadow: 8px 9px 10px 0px #494949;
-box-shadow: 8px 9px 10px 0px #494949;
+box-shadow: 8px 9px 10px 0px #494949; */
 padding-bottom: 10px;
 }
 .drop{
@@ -81,10 +86,9 @@ justify-content: space-around;
 /* !!!!!!!!SEARCH BAR!!!!!!!!!!!!! */
 
 .ConteinerSearch{
-  display: flex;
-  justify-content: center;
   margin-top: 25px;
   margin-bottom: 25px;
+  justify-content: center;
 }
 
 .SearchBar{
@@ -107,7 +111,7 @@ justify-content: space-around;
   margin-top: 30px;
   /* border: solid black; */
   width: 100%;
-  background-color: #AFBEA2;
+  background-color: #ffde9742;
   border-radius: 10px;
   -webkit-box-shadow: 8px 9px 10px 0px #494949;
   -moz-box-shadow: 8px 9px 10px 0px #494949;
@@ -118,12 +122,7 @@ justify-content: space-around;
   justify-content: center;
   }
   
-  .inLineaContent{
-    
-    justify-content: center;
-    flex-direction: column;
-  }
-
+  
   .pContet{
     font-size: x-large;
     color: aliceblue;
@@ -164,7 +163,7 @@ justify-content: space-around;
     background-color: transparent;
     background-color: rgba(2, 32, 71, 0.247);
     border:1px solid black;
-    width: 142px;
+    width: 160px;
     height: 37px;
     text-align: center;
     margin-bottom: 5px;

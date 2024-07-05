@@ -1,5 +1,4 @@
 import { Component } from "react";
-import background from "../assets/Banner.png";
 
 class TopBar extends Component {
     render() {
