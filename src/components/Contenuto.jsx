@@ -3,11 +3,11 @@ import { Button, Card, Container, Row } from "react-bootstrap";
 
 class Contenuto extends Component {
     state = {
-        cities: ["Treviso", "New York", "Venice"],
+        cities: ["Treviso", "New York", "Venice"], //!SELEZIONE CITTA' PER RICERCA IMMAGINI 
         cityImages: {}
     };
 
-    fetchCityImage = (cityName) => {
+    fetchCityImage = (cityName) => {                                     //!CREATO UN API PER COLLEGARE LE FOTO ALLA RICERCA DELL NOME TRAPITE REGISTRAZIONE SU UNSPLASH 
         return fetch(`https://api.unsplash.com/search/photos?query=${cityName}&client_id=ByLQIS6mFtzPrTNUt5V1hH-bbkKEs-MMgk-qfx_yMIM`)
             .then((resp) => {
                 if (resp.ok) {
@@ -16,11 +16,11 @@ class Contenuto extends Component {
                     throw new Error('ERRORE DI CHIAMATA');
                 }
             })
-            .then((data) => data.results[0]?.urls?.small);
+            .then((data) => data.results[0]?.urls?.small);    
     };
 
     componentDidMount() {
-        console.log('COMPONENTDIDMOUNT');
+        console.log('COMPONENT DID MOUNT');
         const imagePromises = this.state.cities.map(city => this.fetchCityImage(city));
 
         Promise.all(imagePromises)
