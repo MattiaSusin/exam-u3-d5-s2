@@ -1,20 +1,18 @@
-import React, { Component } from "react";
-import { Button,Form, Row } from "react-bootstrap";
-import DetailsSearch from "./DetailsSearch";
+import { useState } from "react";
+import { Button, Form, Row } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
-class Search extends Component {
-  state = {
-    city: "",
-    coordinates: null,
+const Search = () => {
+  const [city, setCity] = useState("");
+  const [coordinates, setCoordinates] = useState(null);
+  const navigate = useNavigate();
+
+  const handleInputChange = (event) => {
+    setCity(event.target.value);
   };
 
-  handleInputChange = (event) => {
-    this.setState({ city: event.target.value });
-  };
-
-  handleSubmit = async (event) => {                                                                        //!COL METODO HANDLE CREIAMO UNA RICERCA TRAMITE LE FETCH PER CERCARE LA CITTA' 
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    const { city } = this.state;
     if (city) {
       try {
         const response = await fetch(
@@ -26,44 +24,38 @@ class Search extends Component {
             lat: data.coord.lat,
             lon: data.coord.lon,
           };
-          this.setState({ coordinates });
+          setCoordinates(coordinates);
+          navigate('/dettailsSearch', { state: { city, coordinates } });
         } else {
-          console.error("Error fetching weather data");
+          console.error("ERROR");
         }
       } catch (error) {
-        console.error("Error fetching weather data", error);
+        console.error("ERROR", error);
       }
     }
   };
 
-  render() {
-    const { city, coordinates } = this.state;
-    return (
-      <>
-        <Form inline onSubmit={this.handleSubmit}>
-          <Row className="ContainerSearch">
-            
-              <Form.Control
-                type="text"
-                placeholder="SEARCH YOUR CITY"
-                className="SearchBar mr-sm-2"
-                value={city}
-                onChange={this.handleInputChange}
-              />
-            
-           
-              <Button className="buttonSearch" type="submit" variant="primary">
-                GO
-              </Button>
-            
-          </Row>
-        </Form>
-        <div style={{ marginTop: '20px' }}>
-          {coordinates && <DetailsSearch coordinates={coordinates} />}
-        </div>
-      </>
-    );
-  }
-}
+  return (
+    <>
+      <Form inline onSubmit={handleSubmit}>
+        <Row>
+
+          <div className="containerSearchCenter">
+            <Form.Control
+              type="text"
+              placeholder="SEARCH YOUR CITY"
+              className="SearchBar mr-sm-2"
+              value={city}
+              onChange={handleInputChange}
+            />
+            <Button className="buttonSearch" type="submit" variant="primary">
+              GO
+            </Button>
+          </div>
+         </Row>
+      </Form>
+    </>
+  );
+};
 
 export default Search;

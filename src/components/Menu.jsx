@@ -2,7 +2,6 @@ import { Component } from "react";
 import { Container, Row} from "react-bootstrap";
 import Search from "./Search";
 import Contenuto from "./Contenuto";
-import ResultsSearch from "./ResultsSearch";
 
 class Menu extends Component{
     render(){
@@ -18,7 +17,6 @@ class Menu extends Component{
                 <Search/>
             </div>
             <Contenuto />
-            <ResultsSearch/>
         </Row>
         )
     }

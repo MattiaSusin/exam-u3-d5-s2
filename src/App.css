@@ -9,6 +9,7 @@ body{
   background-repeat: no-repeat; /* Impedisce la ripetizione dell'immagine */
   background-attachment: fixed; /* Rende l'immagine di sfondo fissa durante lo scrolling */
   background-position: center; /* Centra l'immagine di sfondo */
+  
 }
 
 
@@ -84,13 +85,12 @@ justify-content: space-around;
 
 
 /* !!!!!!!!SEARCH BAR!!!!!!!!!!!!! */
-
-.ConteinerSearch{
+.containerSearchCenter{
+  display: flex;
+  justify-content: center;
   margin-top: 25px;
   margin-bottom: 25px;
-  justify-content: center;
 }
-
 .SearchBar{
   width: 500px;
   height: 50px;
@@ -179,3 +179,125 @@ justify-content: space-around;
     box-shadow: 46px -13px 13px -29px rgba(0,0,0,0.1);
     cursor: pointer;
   }
+
+  /* !!!!!!!!!!RESULTS!!!!!!!!!!!!! */
+
+  .PageSearch{
+  }
+  .contenitoreResults1{
+    margin-top: 30px;
+    /* border: solid black; */
+    width: 100%;
+    background-color: #ffde9742;
+    border-radius: 10px;
+    -webkit-box-shadow: 8px 9px 10px 0px #494949;
+    -moz-box-shadow: 8px 9px 10px 0px #494949;
+    -o-box-shadow: 8px 9px 10px 0px #494949;
+    box-shadow: 8px 9px 10px 0px #494949;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contenitoreResults2{
+    margin-top: 30px;
+    /* border: solid black; */
+    width: 100%;
+    background-color: #ffde9742;
+    border-radius: 10px;
+    -webkit-box-shadow: 8px 9px 10px 0px #494949;
+    -moz-box-shadow: 8px 9px 10px 0px #494949;
+    -o-box-shadow: 8px 9px 10px 0px #494949;
+    box-shadow: 8px 9px 10px 0px #494949;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .CardsSearch{
+    display: flex;
+  }
+
+  .BodyCardSearch{
+    position: relative;
+    z-index: 1;}
+
+  
+
+
+
+    .weather-card {
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      border: 0.1px solid rgba(102, 102, 102, 0.041);
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      margin-left: 20px;
+      margin-right: 20px;
+      height: 152px;
+      padding-top: 15px;
+      padding-bottom: 50px;
+      background-color: transparent;
+      cursor: pointer;
+    }
+    
+    .weather-card h5 {
+      margin-bottom: 15px;
+      color: #333;
+    }
+    
+    .weather-card p {
+      margin: 5px 0;
+      color: #555;
+    }
+    
+    .carousel .carousel-inner {
+      display: flex;
+    }
+    
+    .carousel .carousel-item {
+      flex: 1;
+    }
+    
+    .h2Results{
+      display: flex;
+      justify-content: center;
+      font-size: xx-large;
+      cursor: pointer;
+      color: aliceblue;
+    }
+
+    .h2Results:hover{
+      color: black;
+    }
+
+    .h3Results{
+      color: black;
+    }
+
+    .h3Results{
+      display: flex;
+      justify-content: center;
+      font-size: x-large;
+      cursor: pointer;
+      color: aliceblue;
+    }
+
+     .h3Results:hover{
+      color: black;
+    }
+
+    .carroselResult{
+     padding-left: 20px;
+     padding-right: 20px;
+     gap: 20px;
+    }
+
+    span{
+      font-weight: bold;
+    }
+
+    .h5Results{
+      font-weight: bold;
+      font-size:medium;
+    }
